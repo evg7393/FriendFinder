@@ -5,14 +5,14 @@ in the export pass parameter app -Express, when user selects url, deliver server
 
 module.exports = function (app) {
 
-    app.get("/surevey", function(req, res){
+    app.get("/..public/survey.html", function(req, res){
         res.sendFile(path.join(__dirname + "/../public/survey.html"));
 
     });
 
     //homepage route
     app.use(function(req, res){
-        res.sendFile(path.join)(__dirname + "/..public/home/html");
+        res.sendFile(path.join)(__dirname + "/..public/home.html");
 
     });
 }
