@@ -1,18 +1,19 @@
 var path = require("path");
 
-/* routes to tell router what to deliver based on url
-in the export pass parameter app -Express, when user selects url, deliver server file*/
+/* routes to tell router what page to deliver based on url
+in the export pass parameter app -Express.. when user selects url, deliver survey file*/
 
 module.exports = function (app) {
 
-    app.get("/..public/survey.html", function(req, res){
+    app.get("/survey", function(req, res) {
         res.sendFile(path.join(__dirname + "/../public/survey.html"));
 
     });
 
-    //homepage route
-    app.use(function(req, res){
-        res.sendFile(path.join)(__dirname + "/..public/home.html");
-
+    app.use(function(req, res) {
+        res.sendFile(path.join(__dirname + "/../public/home.html"));
     });
+    
+
+
 }
